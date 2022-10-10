@@ -1,0 +1,347 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.my {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  width: 90%;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-guan {
+  width: 33rpx;
+  height: 32rpx;
+  vertical-align: middle;
+}
+
+.userinfo-nickname {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: "appleStandard";
+}
+
+.userinfo-nickname view:last-child {
+  font-family: "Ali";
+  font-size: 26rpx;
+  color: #777B8C;
+}
+
+.userinfo-nickname view:last-child text {
+  font-family: "DIN";
+  font-size: 28rpx;
+  color: #E65748;
+  font-weight: Bold;
+}
+
+.nav::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* 会员内容*/
+.rotation_image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.tab-box {
+  width: 100%;
+  height: 400rpx;
+  margin-bottom: 20rpx;
+}
+
+.nav {
+  height: 10rpx;
+  width: 240rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #F5F6F9;
+  border: 1px solid #F5F6F9;
+  white-space: nowrap;
+  display: flex;
+}
+
+.nav-item {
+  width: 40rpx;
+  height: 10rpx;
+
+  font-size: 30rpx;
+  overflow: visible;
+  font-family: "appleMiddleBlack";
+}
+
+
+.nav-item.active {
+  color: #fff;
+  background: #E65748;
+}
+
+.my_main {
+  height: 100%;
+}
+
+.my_right {
+  position: relative;
+}
+
+.my_right image {
+  width: 750rpx;
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+}
+
+.my_left {
+  width: 260rpx;
+  position: absolute;
+  top: 110rpx;
+  left: 80rpx;
+}
+
+.bronze {
+  border-radius: 10rpx;
+  /* border: 1.5px solid #F1E1EB; */
+  /* background-color: #F1E1EB; */
+  margin: 20rpx auto;
+  background-color: #E9795E;
+  height: 6rpx;
+}
+
+.weui-progress {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.weui-progress__bar {
+  width: 100%;
+  height: 6rpx;
+}
+
+.weui-progress__inner-bar {
+  background-color: #E9795E;
+}
+
+.my_left view:first-child {
+  font-size: 40rpx;
+  font-family: "appleMiddleBold";
+  color: #1A1E33;
+}
+
+.my_left view:last-child {
+  font-size: 22rpx;
+  color: #B1B4BF;
+  line-height: 32prx;
+}
+
+.weui-progress .weui-hidden_abs text:first-child {
+  font-family: "DIN";
+  font-size: 32rpx;
+  color: #1A1E33;
+  font-weight: bold;
+}
+
+.weui-progress .weui-hidden_abs text:last-child {
+  font-family: "DIN";
+  font-size: 26rpx;
+  color: #777B8C;
+}
+
+/* 折叠功能 */
+.my_quanyi {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.equity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1rpx solid #f1f1f1; */
+}
+
+.equity_left {
+  font-family: "appleMiddleBold";
+  font-size: 40rpx;
+  color: #1A1E33;
+  height: 100rpx;
+  line-height: 100rpx;
+  letter-spacing: 1.4rpx;
+}
+
+.equity_left text {
+  font-family: "DIN";
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #E65748;
+}
+
+.equity_right {
+  font-family: "Ali";
+  font-size: 26rpx;
+  color: #B1B4BF;
+}
+
+.equity_right image {
+  width: 20rpx;
+  height: 8rpx;
+  vertical-align: middle;
+}
+
+.equity_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.equity_list {
+  height: 146rpx;
+  overflow: hidden;
+  margin-top: 30rpx;
+}
+
+.Hequity_list {
+  height: 510rpx;
+  overflow: hidden;
+}
+
+.equity_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.my_equity {
+  width: 25%;
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.my_equity .equity_box image {
+  width: 84rpx;
+}
+
+.equity_img {
+  position: relative;
+}
+
+.my_equity .equity_box .lock {
+  width: 28rpx;
+  position: absolute;
+  bottom: 15rpx;
+  right: 0rpx;
+}
+
+.equity_box .unlock {
+  color: #B1B4BF !important;
+}
+
+.equity_right .arrow_bottom {
+  transform: rotate(180deg);
+}
+
+.equity_box view:last-child {
+  font-size: 26rpx;
+  color: #1A1E33;
+}
+
+.function_list {
+  width: 90%;
+  margin: 40rpx auto 60rpx;
+}
+
+.my_funlist {
+  background: #F5F6F9;
+  border-radius: 32rpx;
+}
+
+.weui-cell_access {
+  height: 100rpx;
+  /* padding: 0 30rpx; */
+  line-height: 100rpx;
+  padding: 0 30rpx;
+}
+
+.weui-cell:before {
+  position: absolute;
+  right: 24rpx;
+}
+
+
+
+/* kaishi  */
+.poster {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.advert {
+  width: 600rpx;
+  height: 800rpx;
+  position: relative;
+}
+
+.callus {
+  width: 600rpx;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.advert .close image {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  right: -3%;
+  top: -8%;
+  transform: translate(-50%, 0);
+}
+
+.QR {
+  width: 360rpx;
+  height: 360rpx;
+  position: absolute;
+  top: 272rpx;
+  left: 120rpx;
+  border-radius: 10rpx;
+}

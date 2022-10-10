@@ -1,0 +1,19 @@
+<view class="container">
+  <image class="beijing" src="https://insure.meihualife.com/mh0002/zhihu/images/img22.png" show-menu-by-longpress></image>
+  <!-- <view class="{{heightbox?'ss':'box'}}"> -->
+  <view class="box">
+    <image src="{{hotSearch}}" class="qrcode" show-menu-by-longpress></image>
+  </view>
+  <view class="title">
+    <view>{{title}}</view>
+    <view>{{titleTwo}}</view>
+  </view>
+  <view class="middlecontent">
+    <view>{{middlecontent}}</view>
+    <view>{{middlecontent1}}</view>
+  </view>
+  <view class="bottomcontent">
+    <view>{{bottomcontent}}</view>
+    <view>{{bottomcontentTwo}}</view>
+  </view>
+</view>

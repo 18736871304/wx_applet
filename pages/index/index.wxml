@@ -1,0 +1,180 @@
+<!--index.wxml-->
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
+<!-- <navbar page-name="{{navbar.shoppingName}}"></navbar> -->
+
+
+
+<view class="container">
+  <view class="zhegai" bindtap="login" wx:if="{{islogin}}"></view>
+
+  <view class="user">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    <view wx:if="{{!islogin}}" class="userinfo-nickname">
+      <view style="height: 40rpx;line-height: 40rpx;">您好，<text style="font-weight: bold;">{{nickName}} </text>
+        <image mode="widthFix" class="userinfo-guan" src="{{link}}{{guan}}"></image>
+      </view>
+
+      <view class="weui-progress" style="height: 20rpx;line-height: 20rpx; margin-top: 20rpx;">
+        <view class="weui-progress__bar">
+          <view wx:if="{{maxpoints==''}}" class="weui-progress__inner-bar js_progress" style="width:100%"></view>
+          <view wx:if="{{maxpoints!=''}}" class="weui-progress__inner-bar js_progress" style="width:{{points/maxpoints*100+'%'}}"></view>
+        </view>
+        <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+          <text style="font-weight: bold;margin-left: 10rpx;">{{points}}</text>
+          <text wx:if="{{maxpoints!=''}}">/{{maxpoints}}</text>
+        </view>
+
+      </view>
+    </view>
+
+    <view wx:else="{{islogin}}">立即登录</view>
+
+  </view>
+
+  <view class="main">
+    <!-- tab导航栏 -->
+    <!-- scroll-left属性可以控制滚动条位置 -->
+    <!-- scroll-with-animation滚动添加动画过渡 -->
+    <!-- scroll-left="{{navScrollLeft}}" -->
+    <scroll-view scroll-x="true" class="nav" scroll-with-animation="{{true}}">
+      <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">{{navItem.name}}</view>
+      </block>
+    </scroll-view>
+    <!-- 页面内容 -->
+    <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+      <!-- <swiper-item wx:for="{{[0,1,2,3]}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content"> -->
+      <!-- wx:if="{{currentTab=='3'}}" -->
+      <swiper-item class="tab-content">
+        <view class="tab00_main">
+          <view class="tab-main">
+            <view class="tab-num">
+              <view> <text>{{policyCount}}</text>份</view>
+              <view>有效保单</view>
+            </view>
+            <view class="tab-num">
+              <view> <text>{{peopleCount}}</text>位</view>
+              <view>保障家人</view>
+            </view>
+          </view>
+          <view class="tab00_bigbox" >
+            <view class="tab00 " >
+              <view class="tab01  {{policyGroup=='N'?'modify':''}}" bindtap="policyGroup" style="padding-top: 30rpx;">
+                <view class="tab-right" wx:if="{{policyGroup=='N'}}">未解锁</view>
+                <!-- <view class="tab-right" wx:if="false">未解锁</view> -->
+                <image mode="widthFix" src="{{link}}/index/WeChat.png"></image>
+                <view class="baodan">保单服务群</view>
+                <view>1对1家庭保单服务</view>
+              </view>
+            </view>
+            <view class="tab00" >
+              <view class="tab01  {{prepay=='N'?'modify':''}}" bindtap="prepay" style="padding-top: 30rpx;">
+                <view class="tab-right" wx:if="{{prepay=='N'}}">未解锁</view>
+                <image mode="widthFix" src="{{link}}/index/battery.png"></image>
+                <view class="baodan">预理赔审核</view>
+                <view>7*24小时咨询</view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <!-- <image mode='widthFix' src='{{link}}/index/banner_policy.png' bindtap="Topolicy"></image> -->
+        <image mode='widthFix' src='../../images/banner_policy.png' bindtap="Topolicy"></image>
+      </swiper-item>
+      <swiper-item class="tab-content">
+        <image mode='widthFix' src='{{link}}/index/banner_medical.png'></image>
+        <view class="tab01_mian">
+          <view class="tab00_bigbox">
+            <view class="tab00">
+              <view class="tab01  {{doctor=='N'?'modify':''}}" bindtap="doctor">
+                <view class="tab-right" wx:if="{{doctor=='N'}}">未解锁</view>
+                <image mode="widthFix" src="{{link}}/index/WeChat.png"></image>
+                <view class="baodan">就医绿通</view>
+                <view>小病看医生不排队</view>
+              </view>
+            </view>
+            <view class="tab00">
+              <view class="tab01  {{serious=='N'?'modify':''}}" bindtap="serious">
+                <view class="tab-right" wx:if="{{serious=='N'}}">未解锁</view>
+                <image mode="widthFix" src="{{link}}/index/battery.png"></image>
+                <view class="baodan">重疾绿通</view>
+                <view>大病优先挂号</view>
+              </view>
+            </view>
+          </view>
+          <view class="tab00_bigbox">
+            <view class="tab00">
+              <view class="tab01  {{familyDoctor=='N'?'modify':''}}" bindtap="familyDoctor">
+                <view class="tab-right" wx:if="{{familyDoctor=='N'}}">未解锁</view>
+                <image mode="widthFix" src="{{link}}/index/familyDoctor.png"></image>
+                <view class="baodan">家庭医生</view>
+                <view>7*24小时咨询</view>
+              </view>
+            </view>
+            <view class="tab00 ">
+              <view class="tab01 {{drugs=='N'?'modify':''}}" bindtap="drugs">
+                <view class="tab-right" wx:if="{{drugs=='N'}}">未解锁</view>
+                <image mode="widthFix" src="{{link}}/index/drugs.png"></image>
+                <view class="baodan">购药优惠</view>
+                <view>最低可享70%折扣</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="tab-content">
+        <image mode='widthFix' src='{{link}}/index/banner_adviser.png' bindtap="adviser"></image>
+      </swiper-item>
+      <swiper-item class="tab-content">
+        <image mode='widthFix' src='{{link}}/index/banner_law.png' bindtap="lawyer"></image>
+      </swiper-item>
+      <!-- </swiper-item> -->
+    </swiper>
+  </view>
+
+  <view class="integral" wx:if="{{quanyi}}">
+    <view class="int_title">
+      <view>折扣充值专享积分</view>
+      <view>消费可得积分 1元=10积分</view>
+    </view>
+
+
+    <view class="weui-panel__bd">
+      <view aria-labelledby="js_p1m1_bd" bindtap="qunyi" class="weui-media-box weui-media-box_appmsg">
+        <view aria-hidden="true" class="weui-media-box__hd">
+          <image mode="widthFix" class="weui-media-box__thumb" src="{{link}}/index/huafei.png" alt></image>
+        </view>
+        <view aria-hidden="true" id="js_p1m1_bd" class="weui-media-box__bd">
+          <text class="weui-media-box__title">话费</text>
+          <view class="weui-media-box__desc">专属充值福利</view>
+        </view>
+        <view>
+          5折起
+        </view>
+      </view>
+      <view aria-labelledby="js_p1m2_bd" bindtap="qunyi" class="weui-media-box weui-media-box_appmsg">
+        <view aria-hidden="true" class="weui-media-box__hd">
+          <image mode="widthFix" class="weui-media-box__thumb" src="{{link}}/index/youku.png" alt></image>
+        </view>
+        <view aria-hidden="true" id="js_p1m2_bd" class="weui-media-box__bd">
+          <text class="weui-media-box__title">优酷视频</text>
+          <view class="weui-media-box__desc"> 你的热爱，正在热播</view>
+
+        </view>
+        <view>4.6折起</view>
+      </view>
+      <view aria-labelledby="js_p1m2_bd" bindtap="qunyi" class="weui-media-box weui-media-box_appmsg">
+        <view aria-hidden="true" class="weui-media-box__hd">
+          <image mode="widthFix" class="weui-media-box__thumb" src="{{link}}/index/iqiyi.png" alt></image>
+        </view>
+        <view aria-hidden="true" id="js_p1m2_bd" class="weui-media-box__bd">
+          <text class="weui-media-box__title">爱奇艺</text>
+          <view class="weui-media-box__desc">悦享品质</view>
+        </view>
+        <view>5折起</view>
+      </view>
+    </view>
+
+  </view>
+
+</view>

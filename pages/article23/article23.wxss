@@ -1,0 +1,91 @@
+/* pages/article07/article07.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  background: #4285ed;
+  position: relative;
+}
+
+
+
+page {
+  width: 100%;
+  height: 100%;
+}
+
+.beijing {
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  position: absolute;
+  width: 190rpx;
+  height: 185rpx;
+  top: 67.5vh;
+
+}
+
+.qrcode {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+
+
+
+
+.title {
+  width: 750px;
+  height: 35px;
+  line-height: 80rpx;
+  position: absolute;
+  top: 25vh;
+  /* left: 3vw; */
+  font-size:45rpx;
+  font-weight: bold;
+  letter-spacing: 2rpx;
+  text-align: center;
+  color:#122359;
+  /* text-shadow: 2px 4px 2px #2d8ef9; */
+}
+
+/* .title,
+.middlecontent,
+.bottomcontent {
+  color: #fff;
+} */
+
+.middlecontent {
+  width: 160px;
+  line-height: 30rpx;
+  position: absolute;
+  top: 49.3vh;
+  left: 9vw;
+  font-size: 24rpx;
+  font-weight: bold;
+  text-align: center;
+  color: #181715;
+}
+
+.bottomcontent {
+  width: 160px;
+  line-height: 30rpx;
+  position: absolute;
+  top: 49.3vh;
+  left: 47vw;
+  font-size: 24rpx;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bottomcontent view:first-child {
+  color: #181715;
+  text-align: center;
+}
+
+.bottomcontent view:last-child {
+  color: #181715;
+  text-align: center;
+}

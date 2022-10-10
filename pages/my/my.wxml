@@ -1,0 +1,215 @@
+<view class="my">
+
+  <view class="user">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+    <view class="userinfo-nickname">
+      <view style="height: 40rpx;line-height: 40rpx;">您好，<text style="font-weight: bold;">{{nickName}} </text>
+        <image mode="widthFix" class="userinfo-guan" src="{{link}}{{guan}}"></image>
+      </view>
+      <view style="height: 20rpx;line-height: 20rpx; margin-top: 20rpx;">美华VIP会员已守护你走过<text>{{registertime}}</text>天了</view>
+    </view>
+  </view>
+
+  <view class="rotation_image">
+    <swiper class="logo" class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+      <!-- <swiper-item wx:for="{{[0,1,2,3,4,5]}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content"> -->
+
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>青铜会员</view>
+              <view class="bronze"></view>
+              <view>已达成</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/bronze.png"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>白银会员</view>
+              <view class="weui-progress">
+                <view class="weui-progress__bar">
+                  <view class="weui-progress__inner-bar js_progress" style="width:{{silverPoints/1*100+'%'}}"></view>
+                </view>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text>{{silverPoints}}</text>
+                  <text>/1</text>
+                </view>
+              </view>
+              <view wx:if="{{silverPoints=='1'}}">已达成</view>
+              <view wx:else>仅需完成1次保单录入，或消费获得1积分，即可升级黄金会员</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/silver.png"></image>
+
+          </view>
+        </swiper-item>
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>黄金会员</view>
+              <view class="weui-progress">
+                <view class="weui-progress__bar">
+                  <view class="weui-progress__inner-bar js_progress" style="width:{{goldenPoints/20000*100+'%'}}"></view>
+                </view>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text>{{goldenPoints}}</text>
+                  <text>/20000</text>
+                </view>
+              </view>
+              <view wx:if="{{goldenPoints=='20000'}}">已达成</view>
+              <view wx:else="{{goldenPoints < 20000}}">还需<text>{{20000-goldenPoints}}</text>成长值，可升级铂金会员</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/gold.png"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>铂金会员</view>
+              <view class="weui-progress">
+                <view class="weui-progress__bar">
+                  <view class="weui-progress__inner-bar js_progress" style="width:{{platinumPoints/80000*100+'%'}}"></view>
+                </view>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text>{{platinumPoints}}</text>
+                  <text>/80000</text>
+                </view>
+              </view>
+              <view wx:if="{{platinumPoints=='80000'}}">已达成</view>
+              <view wx:else>还需<text>{{80000-platinumPoints}}</text>成长值，可升级钻石会员</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/platinum.png"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>钻石会员</view>
+              <view class="weui-progress">
+                <view class="weui-progress__bar">
+                  <view class="weui-progress__inner-bar js_progress" style="width:{{diamondPoints/150000*100+'%'}}"></view>
+                </view>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text>{{diamondPoints}}</text>
+                  <text>/150000</text>
+                </view>
+              </view>
+              <view wx:if="{{diamondPoints=='150000'}}">已达成</view>
+              <view wx:else>还需{{150000-diamondPoints }}成长值，可升级大富翁会员</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/diamonds.png"></image>
+          </view>
+        </swiper-item>
+        <swiper-item class="my_main" class="tab-content">
+          <view class="my_right">
+            <view class="my_left">
+              <view>大富翁</view>
+              <view class="weui-progress">
+                <view class="weui-progress__bar">
+                  <view class="weui-progress__inner-bar js_progress" style="width:{{millionairePoints/500000*100+'%'}}"></view>
+                </view>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text>{{millionairePoints}}</text>
+                  <text>/500000</text>
+                </view>
+              </view>
+              <view wx:if="{{millionairePoints=='500000'}}">已达成</view>
+              <view wx:else>还需{{500000-millionairePoints}}成长值，可达到最高等级</view>
+            </view>
+            <image mode="widthFix" src="{{link}}/my/richMan.png"></image>
+          </view>
+        </swiper-item>
+      <!-- </swiper-item> -->
+
+    </swiper>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 滚动条 -->
+    <scroll-view enable-flex="true" scroll-x="true" class="nav" scroll-with-animation="{{true}}">
+      <block wx:for="{{[0,1,2,3,4,5]}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+        <view class="nav-item  {{currentTab == idx ?'active':''}}" data-current="{{idx}}"></view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <view class="my_quanyi">
+    <view class="equity" data-index="0" bindtap='changeToggle'>
+      <view class="equity_left">当前已解锁<text>{{quanyiNum}}</text>项权益</view>
+      <view class="equity_right">{{equity_txt}}
+        <image class="{{selectedFlag?'arrow_bottom':'' }}" mode="widthFix" src="{{equity_src}}"></image>
+      </view>
+    </view>
+
+    <view class="equity_list  {{selectedFlag?'Hequity_list':'' }}">
+      <ul>
+        <li class="my_equity" wx:for="{{equityList}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx">
+          <view class="equity_box" data-rightname='{{tabItem.rightname}}' data-isvalid='{{tabItem.isvalid}}' bindtap="equity" >
+            <!-- {{tabItem.rightname}} -->
+            <view class="equity_img">
+              <image mode="widthFix" src="{{link}}{{tabItem.src}}"></image>
+              <image wx:if="{{tabItem.isvalid=='N'}}" class="lock" mode="widthFix" src="{{link}}/my/lock.png"></image>
+            </view>
+            <view class=" {{(tabItem.isvalid)=='N'?'unlock':''}}">{{tabItem.rightname}}</view>
+          </view>
+        </li>
+      </ul>
+    </view>
+
+  </view>
+
+  <view class="function_list">
+    <view class="my_funlist">
+      <view class="weui-cell weui-cell_active weui-cell_access" bindtap="order">
+        <text class="weui-cell__bd">
+          <text class="demo_badge_title" id="b2_n1">我的订单</text>
+        </text>
+        <text class="weui-cell__ft"></text>
+      </view>
+      <view bindtap="clickefu" class="weui-cell weui-cell_active weui-cell_access">
+        <text class="weui-cell__bd">
+          <text class="demo_badge_title" id="b2_n1">我的客服</text>
+        </text>
+        <text class="weui-cell__ft"></text>
+      </view>
+      <view bindtap="callus" class="weui-cell weui-cell_active weui-cell_access">
+        <text class="weui-cell__bd">
+          <text class="demo_badge_title" id="b2_n1">联系我们</text>
+        </text>
+        <text class="weui-cell__ft"></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="poster" wx:if='{{callus}}'>
+    <view class="advert">
+      <view bindtap="close" class="close">
+        <image mode="widthFix" src="{{link}}/my/close.png"></image>
+      </view>
+      <image class="callus" mode="widthFix" src="{{link}}/my/callus.png"></image>
+      <image  wx:if="{{qwurl!=''}}" class="QR" mode="widthFix" src="{{qwurl}}" show-menu-by-longpress="{{true}}"></image>
+      <image wx:if="{{qwurl==''}}" class="QR" mode="widthFix" src="../../images/kefu.png" show-menu-by-longpress="{{true}}"></image>
+    </view>
+  </view>
+
+  <view class="poster" wx:if='{{kefu}}'>
+    <view class="advert">
+      <view bindtap="kefuClose" class="close">
+        <image mode="widthFix" src="{{link}}/my/close.png"></image>
+      </view>
+      <image class="callus" mode="widthFix" src="{{link}}/my/kefu.png"></image>
+      <image class="QR" mode="widthFix" src="../../images/kefu.png" show-menu-by-longpress="{{true}}"></image>
+    </view>
+  </view>
+
+</view>

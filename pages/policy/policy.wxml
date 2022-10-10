@@ -1,0 +1,122 @@
+<!--pages/policy/policy.wxml-->
+<wxs module="threeNum" src="../threeNum.wxs"></wxs>
+<view class="main">
+  <scroll-view scroll-x="true" class="nav" scroll-with-animation="{{true}}">
+    <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+      <view class="nav-item {{currentTab == idx ?'active':''}}" data-current="{{idx}}" bindtap="switchNav">{{navItem.name}}</view>
+    </block>
+  </scroll-view>
+  <!-- 页面内容 -->
+  <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">
+    <swiper-item wx:for="{{[0,1,2,3,4]}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+      <view class="policy_bigbox">
+        <view class="policy_box">
+          <view class="policy_flex">
+            <!-- 左边 -->
+            <view class="policy_left">
+              <view class="policy_icon" wx:if="{{total_sumprem!='个人总保费'}}">
+                <image mode="widthFix" src="{{link}}/policy/cloud.png"></image>
+                <text>保单云服务</text>
+              </view>
+              <view class="policy_icon" wx:else="{{total_sumprem=='个人总保费'}}">
+                <!-- <image mode="widthFix" src="{{link}}/policy/cloud.png"></image> -->
+                <text>{{insuranceInfo.realname}}的保单</text>
+              </view>
+              <view class="tab-main">
+                <view class="tab-num">
+                  <view> <text>{{insuranceInfo.effectiveNum}}</text>份</view>
+                  <view>有效保单</view>
+                </view>
+                <view class="tab-num">
+                  <view> <text>{{insuranceInfo.protectionNum}}</text>位</view>
+                  <view>保障家人</view>
+                </view>
+              </view>
+            </view>
+            <!-- 右边 -->
+            <view class="policy_right">
+              <view class="policy_money">
+                <view>￥<text>{{threeNum.add_comma_toThousands(sumamnt)}}</text></view>
+                <view>{{total_sumamnt}}</view>
+              </view>
+              <view class="policy_money">
+                <view>￥<text>{{threeNum.add_comma_toThousands(sumprem)}}</text> </view>
+                <view>{{total_sumprem}}</view>
+              </view>
+            </view>
+          </view>
+
+          <view class="policy_chart">
+            <view>保障概况 </view>
+            <view class="housekeeper" wx:if="{{insuranceInfo.realname!=''}}">
+              <image src="https://insure.meihualife.com/{{insuranceInfo.photourl}}" mode="aspectFill"></image>
+              <text>我的管家:<text> {{insuranceInfo.realname}}</text> </text>
+            </view>
+          </view>
+
+          <view class="chart_main">
+            <view class="weui-progress" wx:for="{{chartsData}}" wx:for-item="chart" wx:key="idx">
+              <view class="weui-progress__bar">
+
+                <view wx:if="{{chart.amnt=='0'}}" class="weui-progress__inner-bar js_progress inner-bar0{{index+1}}" style="height:0%"></view>
+                <view wx:else="{{chart.amnt}}" class="weui-progress__inner-bar js_progress inner-bar0{{index+1}}" style="height:{{chart.amnt/chart.zong*100+'%'}}"></view>
+
+
+                <wxs module="filters" src="./policy.wxs"></wxs>
+                <view id="js_current" class="weui-hidden_abs" aria-role="alert">
+                  <text wx:if="{{chart.amnt=='0'}}" style="color: #E65748;">暂无\n</text>
+                  <text wx:else="{{chart.amnt}}">{{ filters.toFix(chart.amnt/10000)}}<text>万</text>\n</text>{{chart.name}}
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="policy_chart policy_details">
+            <view>投保保单 </view>
+            <view class="details_main">
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{hostList}}" class="hostPicker">
+                <view class="picker-head">
+                  <view class="p">
+                    {{hostList[hostIndex]}}[{{policyLength}}]
+                    <image mode="widthFix" src="{{link}}/policy/arrow_bottom.png"></image>
+                  </view>
+                </view>
+              </picker>
+            </view>
+          </view>
+
+          <view class="details_content">
+            <view class="no_Policy" wx:if="{{noPolicy}}">
+              <image mode="widthFix" src="{{link}}/policy/no_Policy.png"></image>
+              <view>暂无保单</view>
+            </view>
+            <block wx:else>
+              <view class="details_bigbox" wx:for="{{policyData}}" wx:for-item="policy" wx:key="index">
+                <view class="list-box-icon-wrap">
+                  <image wx:if="{{policy.status=='effective'}}" mode="widthFix" class="list-box-icon" src="{{link}}/baozhangzhong.png"></image>
+                  <image wx:if="{{policy.status=='invalid'}}" mode="widthFix" class="list-box-icon" src="{{link}}/yishixiao.png"></image>
+                  <image wx:if="{{policy.status=='processing'}}" mode="widthFix" class="list-box-icon" src="{{link}}/daichuli.png"></image>
+                  <image wx:if="{{policy.status=='cancel'}}" mode="widthFix" class="list-box-icon" src="{{link}}/yizhongzhi.png"></image>
+                </view>
+                <view class="details_title">
+                  <view>{{policy.risktypename}}</view>
+                  <view>{{policy.riskname}}</view>
+                </view>
+                <view class="detalis_policy">
+                  <ul>
+                    <li><text>被保人</text><text>{{policy.name}}</text></li>
+                    <li><text>保障期限</text><text>{{policy.insuyearStr}}</text></li>
+                    <li><text>保险金额</text><text>¥{{(policy.amnt)}}</text></li>
+                    <li><text>保费</text><text>¥{{(policy.prem)}}</text></li>
+                  </ul>
+                </view>
+              </view>
+            </block>
+          </view>
+
+
+        </view>
+        <image mode='widthFix' src='{{link}}/policy/policyBack.png' class="main-back"></image>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

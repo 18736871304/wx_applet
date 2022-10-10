@@ -1,0 +1,24 @@
+<!--pages/lawyer/lawyer.wxml-->
+<view class="policyGroup">
+  <view class="policy">
+    <view class="bigbox">
+      <image mode="widthFix" src="{{link}}/policy/secPage/service.png"></image>
+    </view>
+    <view class="text_box">
+      <view class="text_title">
+        <view>美华保险服务群</view>
+        <view>在这里美华与你一起“第三只眼看保险”欢迎扫码交流</view>
+      </view>
+      <view style="height: 360rpx;">
+        <image class="QR" mode="widthFix" src="{{qwurl}}" show-menu-by-longpress="{{true}}"></image>
+      </view>
+
+      <view class="text_bottom">
+        <view>进群暗号</view>
+        <view>美华保险</view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,102 @@
+/* pages/order/order.wxss */
+.order {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.order_bigbox {
+  width: 662rpx;
+  height: 346rpx;
+  margin: 0 auto;
+  border: 2px solid #E7E7E7;
+  border-radius: 32rpx;
+  display: block;
+  padding: 35rpx 40rpx;
+  box-sizing: border-box;
+}
+
+.order_bigbox image {
+  width: 26rpx;
+  vertical-align: middle;
+}
+
+.order_bigbox li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 26rpx;
+}
+
+.order_bigbox li:nth-child(3),
+.order_bigbox li:nth-child(4) {
+  justify-content: flex-start;
+  margin-top: 20rpx;
+}
+
+.recharge {
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #777B8C;
+}
+
+.recharging {
+  font-size: 30rpx;
+  color: #FAAD14;
+}
+
+.order_bigbox li:nth-child(2) {
+  font-family: "appleMiddleBlack";
+  font-size: 32rpx;
+  color: #1A1E33;
+  margin: 28rpx auto 32rpx;
+}
+.order_bigbox li:nth-child(2) view:last-child text{
+  font-family: "DIN";
+  font-weight: bold;
+}
+.order_bigbox li:nth-child(3) view:first-child {
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #777B8C;
+}
+
+.order_bigbox li:nth-child(3) view:last-child {
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #1A1E33;
+}
+
+
+.order_bigbox li:nth-child(4) view:first-child {
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #777B8C;
+}
+
+.order_bigbox li:nth-child(4) view:last-child {
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #1A1E33;
+}
+
+.order_bigbox li:nth-child(5) {
+   height: 1rpx;
+   background: #DADCE6;
+   margin: 32rpx auto 24rpx;
+}
+.order_bigbox li:nth-child(6) view:first-child{
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #E65748;
+}
+.order_bigbox li:nth-child(6) view:last-child{
+  font-family: "appleStandard";
+  font-size: 24rpx;
+  color: #1A1E33;
+}
+.order_bigbox li:nth-child(6) view:last-child text {
+  font-family: "DIN";
+  font-size: 32rpx;
+  color: #1A1E33;
+}

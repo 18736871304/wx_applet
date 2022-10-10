@@ -1,0 +1,10 @@
+{
+  "usingComponents":{
+    "navbar":"/components/navbar/navbar"
+  },
+  "navigationStyle":"custom",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "授权页",
+  "enablePullDownRefresh": false
+}

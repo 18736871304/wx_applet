@@ -1,0 +1,86 @@
+.main {
+  position: fixed;
+  margin-top: 140rpx;
+}
+
+.main image {
+  width: 750rpx;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.title view:first-child {
+  font-family: "appleMiddleBold";
+  font-size: 54rpx;
+  color: #1A1E33;
+  letter-spacing: 1.86rpx;
+  line-height: 88rpx;
+}
+
+.title view:last-child {
+  font-family: "Ali";
+  font-size: 32rpx;
+  color: #777B8C;
+  letter-spacing: 2rpx;
+  line-height: 42rpx;
+}
+
+.submit {
+  width: 622rpx !important;
+  line-height: 100rpx;
+  height: 100rpx;
+  margin-top: 60rpx;
+  font-family: "appleMiddleBlack";
+  color: #fff !important;
+  background-color: #E65748 !important;
+  font-size: 36rpx;
+  letter-spacing: 2rpx;
+  border-radius: 60rpx;
+}
+.weui-form__opr-area {
+  margin-bottom: 24rpx;
+}
+.zhu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.zhu view:first-child{
+  font-family: "Ali";
+  font-size: 26rpx;
+  color: #777B8C;
+  line-height: 26rpx;
+}
+.zhu view:last-child{
+  font-family: "Ali";
+  font-size: 26rpx;
+  color: #1A1E33;
+  line-height: 50rpx;
+  /* font-weight: bold; */
+}
+.weui-transition {
+  display: none;
+}
+.weui-transition_show {
+  display: block;
+}
+.weui-half-screen-dialog__bd{
+  text-align: justify;
+}
+.weui-half-screen-dialog__bd text{
+  display: block;
+  text-indent: 2em;
+}
+
+.weui-form__opr-area{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

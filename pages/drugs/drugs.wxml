@@ -1,0 +1,25 @@
+<!--pages/lawyer/lawyer.wxml-->
+<view class="policyGroup">
+  <view class="policy">
+    <view class="bigbox">
+      <image mode="widthFix" src="{{link}}/policy/secPage/service.png"></image>
+    </view>
+    <view class="text_box">
+      <view class="text_title">
+        <view data-code='{{cardno}}'  bindtap="copy"> 健康权益兑换:{{cardno}}  </view>
+        <view> <text>点击权益码即可复制</text></view>
+        <view>去【京惠健康管家】使用权益吧</view>
+      </view>
+      <view style="height: 440rpx;">
+        <image class="QR" mode="widthFix" src="../../images/jinghui.jpg" show-menu-by-longpress="{{true}}"></image>
+      </view>
+
+      <!-- <view class="text_bottom">
+        <view>进群暗号</view>
+        <view>美华保险</view>
+      </view> -->
+
+    </view>
+
+  </view>
+</view>

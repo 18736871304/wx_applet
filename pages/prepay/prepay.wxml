@@ -1,0 +1,7 @@
+<!--pages/lawyer/lawyer.wxml-->
+<view class="prepay">
+  <image mode="widthFix" bindtap="contact" src="{{link}}/policy/secPage/prepay01.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/prepay02.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/prepay03.png"></image>
+  <view class="contact" bindtap="contact">立即咨询</view>
+</view>

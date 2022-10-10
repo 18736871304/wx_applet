@@ -1,0 +1,18 @@
+/* pages/lawyer/lawyer.wxss */
+
+.lawyer image{
+   width: 750rpx;
+}
+.contact{
+  font-family: "appleMiddleBlack";
+   width: 622rpx;
+   height: 100rpx;
+   color: #fff;
+   font-size: 36rpx;
+   line-height: 100rpx;
+   text-align: center;
+   margin: 10rpx auto 60rpx;
+   background: #E65748;
+   border-radius: 50rpx;
+   letter-spacing: 2rpx;
+}

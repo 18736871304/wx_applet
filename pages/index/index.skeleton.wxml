@@ -1,0 +1,128 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/7/13 上午11:12:57
+使用方法：
+在 E:\user-wei\Meihua-正式版\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 E:\user-wei\Meihua-正式版\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view is="components/navbar/navbar">
+      <view class="navbar--navbar" style="height:65px; ">
+        <view class="navbar--navbar_title sk-transparent sk-text-25-0000-471 sk-text" style="top: 24px; background-position-x: 50%;">美华</view>
+      </view>
+    </view>
+    <view class="container">
+      <view class="user">
+        <image class="userinfo-avatar sk-image" mode="cover"></image>
+        <view class="userinfo-nickname">
+          <view class="sk-transparent">您好，
+            <text style="font-weight: bold;" class="sk-transparent sk-text-18-7500-456 sk-text">信仰风声 </text>
+            <image class="userinfo-guan sk-image" mode="widthFix" style="height: 16px;"></image>
+          </view>
+          <view class="weui-progress">
+            <view class="weui-progress__bar">
+              <view class="weui-progress__inner-bar js_progress" style="width:30%"></view>
+            </view>
+            <text class="weui-hidden_abs sk-transparent" id="js_current"><text style="font-weight: bold;margin-left: 5px;" class="sk-transparent sk-text-18-7500-486 sk-text">150000</text>/500000</text>
+          </view>
+        </view>
+      </view>
+      <view class="main">
+        <scroll-view class="nav" scroll-with-animation="true" scroll-x="true">
+          <view class="nav-item active sk-transparent sk-text-26-5625-376 sk-text" data-current="0" style="background-position-x: 50%;">保单服务</view>
+          <view class="nav-item sk-transparent sk-text-26-5625-408 sk-text" data-current="1" style="background-position-x: 50%;">医疗服务</view>
+          <view class="nav-item sk-transparent sk-text-26-5625-184 sk-text" data-current="2" style="background-position-x: 50%;">理财顾问</view>
+          <view class="nav-item sk-transparent sk-text-26-5625-847 sk-text" data-current="3" style="background-position-x: 50%;">法律咨询</view>
+        </scroll-view>
+        <swiper class="tab-box" current="0" duration="300" autoplay="false">
+          <swiper-item class="tab-content" style="position: absolute; width: 100%; height: 100%; transform: translate(0%, 0px) translateZ(0px);">
+            <view style="position: relative;">
+              <view class="tab00_main">
+                <view class="tab-main">
+                  <view class="tab-num">
+                    <view class="sk-transparent">
+                      <text class="sk-transparent sk-text--14-8148-183 sk-text">3</text>份</view>
+                    <view class="sk-transparent sk-text-18-7500-141 sk-text">有效保单</view>
+                  </view>
+                  <view class="tab-num">
+                    <view class="sk-transparent">
+                      <text class="sk-transparent sk-text--14-8148-472 sk-text">1</text>位</view>
+                    <view class="sk-transparent sk-text-18-7500-230 sk-text">保障家人</view>
+                  </view>
+                </view>
+                <view class="tab00_bigbox">
+                  <view class="tab00">
+                    <view class="tab01" style="padding-top: 15px;">
+                      <image mode="widthFix" style="height: 24px;" class="sk-image"></image>
+                      <view class="baodan sk-transparent sk-text-16-6667-765 sk-text">保单服务群</view>
+                      <view class="sk-transparent sk-text-18-7500-443 sk-text">1对1家庭保单服务</view>
+                    </view>
+                  </view>
+                  <view class="tab00">
+                    <view class="tab01" style="padding-top: 15px;">
+                      <image mode="widthFix" style="height: 24px;" class="sk-image"></image>
+                      <view class="baodan sk-transparent sk-text-16-6667-316 sk-text">预理赔审核</view>
+                      <view class="sk-transparent sk-text-18-7500-216 sk-text">7*24小时咨询</view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <image mode="widthFix" style="height: 287.144px;" class="sk-image"></image>
+            </view>
+          </swiper-item>
+        </swiper>
+      </view>
+      <view class="integral">
+        <view class="int_title">
+          <view class="sk-transparent sk-text-0-0000-648 sk-text">折扣充值专享积分</view>
+          <view class="sk-transparent sk-text-0-0000-503 sk-text">消费可得积分 1元=10积分</view>
+        </view>
+        <view class="weui-panel__bd">
+          <navigator class="weui-media-box weui-media-box_appmsg sk-pseudo sk-pseudo-circle">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb sk-image" mode="widthFix" style="height: 45px;"></image>
+            </view>
+            <view class="weui-media-box__bd" id="js_p1m1_bd">
+              <text class="weui-media-box__title sk-transparent sk-text-14-2857-343 sk-text">话费</text>
+              <view class="weui-media-box__desc sk-transparent sk-text-14-2857-584 sk-text">专属充值福利</view>
+            </view>
+            <view class="sk-transparent sk-text-18-7500-398 sk-text">
+              5折起
+            </view>
+          </navigator>
+          <navigator class="weui-media-box weui-media-box_appmsg sk-pseudo sk-pseudo-circle">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb sk-image" mode="widthFix" style="height: 45px;"></image>
+            </view>
+            <view class="weui-media-box__bd" id="js_p1m2_bd">
+              <text class="weui-media-box__title sk-transparent sk-text-14-2857-251 sk-text">优酷视频</text>
+              <view class="weui-media-box__desc sk-transparent sk-text-14-2857-411 sk-text"> 你的热爱，正在热播</view>
+            </view>
+            <view class="sk-transparent sk-text-18-7500-35 sk-text">4.6折起</view>
+          </navigator>
+          <navigator class="weui-media-box weui-media-box_appmsg sk-pseudo sk-pseudo-circle">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb sk-image" mode="widthFix" style="height: 45px;"></image>
+            </view>
+            <view class="weui-media-box__bd" id="js_p1m2_bd">
+              <text class="weui-media-box__title sk-transparent sk-text-14-2857-630 sk-text">爱奇艺</text>
+              <view class="weui-media-box__desc sk-transparent sk-text-14-2857-204 sk-text">悦享品质</view>
+            </view>
+            <view class="sk-transparent sk-text-18-7500-990 sk-text">5折起</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

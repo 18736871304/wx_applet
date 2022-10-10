@@ -1,0 +1,10 @@
+<!--pages/lawyer/lawyer.wxml-->
+<view class="lawyer">
+  <image mode="widthFix" bindtap="contact" src="{{link}}/policy/secPage/lawyer01.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/lawyer02.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/lawyer03.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/lawyer04.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/lawyer05.png"></image>
+  <image mode="widthFix" src="{{link}}/policy/secPage/lawyer06.png"></image>
+<view class="contact" bindtap="contact">立即咨询</view>
+</view>

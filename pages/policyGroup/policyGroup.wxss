@@ -1,0 +1,68 @@
+/* pages/policyGroup/policyGroup.wxss */
+
+.policy{
+  width: 90%;
+   position: relative;
+   margin: 0 auto;
+}
+.bigbox{ 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.bigbox image{
+   width: 662rpx;
+   margin: 0 auto;
+}
+.QR{
+   width: 360rpx;
+   position: absolute;
+   top: 620rpx;
+   left: 150rpx;
+}
+
+.text_box{
+   width: 662rpx;
+   height: 800rpx;
+   background: #F5F6F9;
+   border-radius: 32rpx;
+}
+.text_title{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.text_title view:first-child{
+   font-family: "Ali";
+   font-size: 58rpx;
+   color: #E65748;
+   letter-spacing: 2rpx;
+   margin: 48rpx auto 20rpx;
+}
+.text_title view:last-child{
+  width: 507rpx;
+   font-family: "Ali";
+   font-size: 28rpx;
+   color: #777B8C;
+   text-align: center;
+}
+.text_bottom{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin:44rpx auto;
+} 
+.text_bottom view:first-child{
+  font-family: "Ali";
+  font-size: 28rpx;
+  color: #777B8C;
+  text-align: center;
+}
+.text_bottom view:last-child{
+   font-family: "appleMiddleBlack";
+   font-size: 32rpx;
+   color: #E65748;
+   text-align: center;
+}
