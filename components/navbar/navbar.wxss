@@ -1,0 +1,63 @@
+/* components/navbar.wxss */
+.navbar {
+  width: 100%;
+  overflow: hidden;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  flex-shrink: 0;
+  background: #fff;
+ 
+}
+
+.navbar_left {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  z-index: 11;
+  line-height: 1;
+  border: 1rpx solid #f0f0f0;
+  border-radius: 40rpx;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.6);
+}
+.navBack image{
+  width: 60%;
+}
+ 
+.navbar_left view {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.nav_line {
+  border-left: 1rpx solid #f0f0f0;
+}
+ 
+.navbar_title {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 115px;
+  padding-right: 115px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

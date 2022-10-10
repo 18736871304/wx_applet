@@ -1,0 +1,4 @@
+
+<view class="navbar" style="height:{{navHeight+5}}px; ">
+  <view class="navbar_title" style="top:{{navTop}}px;">{{pageName}}</view>
+</view>
