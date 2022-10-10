@@ -1,0 +1,80 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/updataLogin/updataLogin",
+    "pages/order/order",
+    "pages/policyGroup/policyGroup",
+    "pages/policy/policy",
+    "pages/logs/logs",
+    "components/navbar/navbar",
+    "pages/lawyer/lawyer",
+    "pages/prepay/prepay",
+    "pages/serious/serious",
+    "pages/doctor/doctor",
+    "pages/familyDoctor/familyDoctor",
+    "pages/drugs/drugs",
+    "pages/financial/financial",
+    "pages/article23/article23"
+    
+  ],
+  "subpackages": [
+    {
+      "root": "packageA",
+      "pages": [
+        "pages/cat/cat",
+        "pages/dog/dog"
+      ]
+    },
+    {
+      "root": "packageB",
+      "name": "pack2",
+      "pages": [
+        "pages/apple/apple",
+        "pages/banana/banana"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/doctor/doctor": {
+      "network": "all",
+      "packages": [
+        "packageA"
+      ]
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#777B8C",
+    "selectedColor": "#1A1E33",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/bottomTab/select_index.png",
+        "iconPath": "images/bottomTab/no_index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/bottomTab/select_policy.png",
+        "iconPath": "images/bottomTab/no_policy.png",
+        "pagePath": "pages/policy/policy",
+        "text": "保单云托管"
+      },
+      {
+        "selectedIconPath": "images/bottomTab/select_my.png",
+        "iconPath": "images/bottomTab/no_my.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

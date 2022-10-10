@@ -1,0 +1,68 @@
+/**app.wxss**/
+@import "style/weui.wxss";
+/* @import "style/stylesheet.wxss"; */
+/* DIN体 */
+@font-face {
+  font-family: "DIN";
+  src: url("https://insure.meihualife.com/mh0002/font/subset-DIN-Medium.ttf")format('truetype');
+}
+/* 阿里普惠体粗 */
+@font-face {
+  font-family: "Ali";
+  src: url("https://insure.meihualife.com/mh0002/font/Alibaba-PuHuiTi-Regular.ttf")format('truetype');
+}
+/* apple_middle_black */
+@font-face {
+  font-family: "appleMiddleBlack";
+  src: url("https://insure.meihualife.com/mh0002/font/apple_middle_black.ttf")format('truetype');
+}
+/* apple_middle_bold */
+@font-face {
+  font-family: "appleMiddleBold";
+  src: url("https://insure.meihualife.com/mh0002/font/apple_middle_bold.ttf")format('truetype');
+}
+/* apple_standard */
+@font-face {
+  font-family: "appleStandard";
+  src: url("https://insure.meihualife.com/mh0002/font/apple_standard.ttf")format('truetype');
+}
+page{
+  height: 100%;
+  font-family: "appleStandard";
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+page,
+text,
+view,
+navigator,
+swiper,
+swiper-item,
+image,
+button {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+button::after {
+  border: none;
+}
+button {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: inherit;
+}
+button {
+  border-radius: 0;
+}
+
+
+
+
+
